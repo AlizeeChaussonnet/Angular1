@@ -1,0 +1,9 @@
+<div>
+    <img [src]="user.photo" [alt]="user.name" />
+    <p>Nom: {{user.name}}</p>
+    <p>Prénom : {{user.firstname}}</p>
+    <p>Citation : {{user.quote}}</p>
+    <input [(ngModel)]="user.quote" />
+    <button (click)="toggleShow()">Afficher/Masque l'age</button>
+    <p *ngIf="isShown"> Age : {{user.age}}</p>
+</div>
